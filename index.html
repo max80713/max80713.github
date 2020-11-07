@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: lightseagreen;
+      }
+
+      #card {
+        width: 744px;
+        height: 528px;
+        background-color: white;
+        position: relative;
+      }
+
+      #intro {
+        width: 238px;
+        height: 284px;
+        background-color: darkslategray;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        color: white;
+        padding-left: 24px;
+      }
+
+      #center {
+        width: 320px;
+        height: 528px;
+        /* background-color: gray; */
+        position: absolute;
+        left: 238px;
+        color: gray;
+        padding-left: 24px;
+      }
+
+      h2 {
+        color: lightseagreen;
+      }
+
+      #right {
+        width: 186px;
+        height: 528px;
+        position: absolute;
+        right: 0;
+      }
+
+      .skill {
+        width: 138px;
+        height: 32px;
+        /* background-color: blue; */
+        position: relative;
+        color: gray;
+        margin-top: 12px;
+      }
+
+      .gray-bar {
+        width: 138px;
+        height: 12px;
+        background-color: lightgray;
+        position: absolute;
+        bottom: 0;
+        border-radius: 6px;
+      }
+
+      .green-bar {
+        height: 12px;
+        background-color: lightseagreen;
+        position: absolute;
+        bottom: 0;
+        border-radius: 6px;
+      }
+
+      .green-bar-2 {
+        height: 12px;
+        background-color: lightseagreen;
+        position: absolute;
+        bottom: 0;
+        border-radius: 6px;
+        width: 24px;
+      }
+
+      .right-text {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#img-2").hide();
+
+        $("#img-1").click(function () {
+          $("#img-1").fadeOut(1000);
+          $("#img-2").fadeIn(1000);
+        });
+
+        $("#img-2").click(function () {
+          $("#img-2").fadeOut(1000);
+          $("#img-1").fadeIn(1000);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="card">
+      <img src="photo-1.jpg" id="img-1" width="238" height="244" />
+      <img src="photo-2.jpg" id="img-2" width="238" height="244" />
+      <div id="intro">
+        <h1>徐銘谷</h1>
+        <p>29 歲</p>
+        <p>導師</p>
+        <p>台北市</p>
+        <p>Nice to meet you!</p>
+      </div>
+      <div id="center">
+        <h2>自我介紹</h2>
+        <p>你好歡迎來到我的履歷</p>
+        <h2>工作經歷</h2>
+        <ul>
+          <li>網頁前端導師</li>
+          <li>前端工程師</li>
+        </ul>
+        <h2>講師經歷</h2>
+        <ul>
+          <li>ModernWeb 2020</li>
+          <li>AppWrokes School 2020</li>
+        </ul>
+      </div>
+      <div id="right">
+        <h2>個性</h2>
+        <div class="skill">
+          內向
+          <div class="right-text">外向</div>
+          <div class="gray-bar"></div>
+          <div class="green-bar-2" style="left: 50%;"></div>
+        </div>
+        <div class="skill">
+          理性
+          <div class="right-text">感性</div>
+          <div class="gray-bar"></div>
+          <div class="green-bar-2" style="left: 70%;"></div>
+        </div>
+        <h2>技能</h2>
+        <div class="skill">
+          HTML
+          <div class="gray-bar"></div>
+          <div class="green-bar" style="width: 50%;"></div>
+        </div>
+        <div class="skill">
+          CSS
+          <div class="gray-bar"></div>
+          <div class="green-bar" style="width: 30%;"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
