@@ -4,168 +4,124 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Static Template</title>
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        background-color: lightseagreen;
-      }
-
-      #card {
-        width: 744px;
-        height: 528px;
-        background-color: white;
-        position: relative;
-      }
-
-      #intro {
-        width: 238px;
-        height: 284px;
-        background-color: darkslategray;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        color: white;
-        padding-left: 24px;
-      }
-
-      #center {
-        width: 320px;
-        height: 528px;
-        /* background-color: gray; */
-        position: absolute;
-        left: 238px;
-        color: gray;
-        padding-left: 24px;
-      }
-
-      h2 {
-        color: lightseagreen;
-      }
-
-      #right {
-        width: 186px;
-        height: 528px;
-        position: absolute;
-        right: 0;
-      }
-
-      .skill {
-        width: 138px;
-        height: 32px;
-        /* background-color: blue; */
-        position: relative;
-        color: gray;
-        margin-top: 12px;
-      }
-
-      .gray-bar {
-        width: 138px;
-        height: 12px;
-        background-color: lightgray;
-        position: absolute;
-        bottom: 0;
-        border-radius: 6px;
-      }
-
-      .green-bar {
-        height: 12px;
-        background-color: lightseagreen;
-        position: absolute;
-        bottom: 0;
-        border-radius: 6px;
-      }
-
-      .green-bar-2 {
-        height: 12px;
-        background-color: lightseagreen;
-        position: absolute;
-        bottom: 0;
-        border-radius: 6px;
-        width: 24px;
-      }
-
-      .right-text {
-        position: absolute;
-        right: 0;
-        top: 0;
-      }
-
-      img {
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-    </style>
+    <title>Persona</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/6debf59dce.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-      $(function () {
-        $("#img-2").hide();
-
-        $("#img-1").click(function () {
-          $("#img-1").fadeOut(1000);
-          $("#img-2").fadeIn(1000);
-        });
-
-        $("#img-2").click(function () {
-          $("#img-2").fadeOut(1000);
-          $("#img-1").fadeIn(1000);
-        });
-      });
-    </script>
+    <script src="index.js"></script>
   </head>
   <body>
-    <div id="card">
-      <img src="photo-1.jpg" id="img-1" width="238" height="244" />
-      <img src="photo-2.jpg" id="img-2" width="238" height="244" />
-      <div id="intro">
+    <div class="card">
+      <img src="photo-1.jpg" class="photo photo-1" width="238" height="244" />
+      <img src="photo-2.jpg" class="photo photo-2" width="238" height="244" />
+      <img src="photo-3.jpg" class="photo photo-3" width="238" height="244" />
+      <div class="dot dot-1"></div>
+      <div class="dot dot-2"></div>
+      <div class="dot dot-3"></div>
+      <div class="intro">
         <h1>徐銘谷</h1>
         <p>29 歲</p>
-        <p>導師</p>
-        <p>台北市</p>
-        <p>Nice to meet you!</p>
+        <p>網頁前端導師</p>
+        <p>台灣, 台北</p>
+        <p class="quote">
+          "你不一定要很厲害，才能開始；<br />你要開始，才能很厲害。"
+        </p>
       </div>
-      <div id="center">
-        <h2>自我介紹</h2>
-        <p>你好歡迎來到我的履歷</p>
-        <h2>工作經歷</h2>
-        <ul>
-          <li>網頁前端導師</li>
-          <li>前端工程師</li>
-        </ul>
-        <h2>講師經歷</h2>
-        <ul>
-          <li>ModernWeb 2020</li>
-          <li>AppWrokes School 2020</li>
-        </ul>
+      <div class="detail detail-1">
+        <div>
+          <h2><i class="fas fa-user"></i> 關於我</h2>
+          <p>
+            大家好，我是谷哥，物理系畢業之後，透過自學與不斷的練習進而轉往前端工程師發展，熟悉網頁前端技術與框架，曾經擔任
+            iThome 舉辦的 Modern Web 講者，目前任職 AppWorks School
+            導師，致力於程式教學以協助新手學習程式。
+          </p>
+        </div>
+        <div>
+          <h2><i class="fas fa-suitcase"></i> 工作經歷</h2>
+          <ul>
+            <li>AppWorks School 網頁前端導師 2020 ~</li>
+            <li>邦妮科技資深前端工程師 2019 ~ 2020</li>
+            <li>鉅亨網前端工程師 2018 ~ 2019</li>
+            <li>安銳智慧全端工程師 2016 ~ 2018</li>
+          </ul>
+        </div>
+        <div>
+          <h2><i class="fas fa-microphone"></i> 講師經歷</h2>
+          <ul>
+            <li>
+              Udemy
+              <a href="https://www.udemy.com/course/react-super-easy/">
+                線上課程</a
+              >
+              講師 2020
+            </li>
+            <li>
+              iThome Modern Web
+              <a href="https://modernweb.tw/speaker-page/7478">議程</a> 講師
+              2020
+            </li>
+            <li>
+              iThome Modern Web
+              <a href="https://modernweb.tw/2017/index.html#s2106">議程</a> 講師
+              2017
+            </li>
+            <li>資策會 Python 講師 2016</li>
+          </ul>
+        </div>
       </div>
-      <div id="right">
-        <h2>個性</h2>
-        <div class="skill">
-          內向
-          <div class="right-text">外向</div>
-          <div class="gray-bar"></div>
-          <div class="green-bar-2" style="left: 50%;"></div>
+      <div class="detail detail-2">
+        <div>
+          <h2><i class="fas fa-smile"></i> 個性</h2>
+          <div class="indicator">
+            <div class="left-text">內向</div>
+            <div class="right-text">外向</div>
+            <div class="gray-bar"></div>
+            <div class="green-bar" style="left: 50%;"></div>
+          </div>
+          <div class="indicator">
+            <div class="left-text">理性</div>
+            <div class="right-text">感性</div>
+            <div class="gray-bar"></div>
+            <div class="green-bar" style="left: 45%;"></div>
+          </div>
+          <div class="indicator">
+            <div class="left-text">謹慎</div>
+            <div class="right-text">冒險</div>
+            <div class="gray-bar"></div>
+            <div class="green-bar" style="left: 10%;"></div>
+          </div>
+          <div class="indicator">
+            <div class="left-text">思考</div>
+            <div class="right-text">行動</div>
+            <div class="gray-bar"></div>
+            <div class="green-bar" style="left: 30%;"></div>
+          </div>
         </div>
-        <div class="skill">
-          理性
-          <div class="right-text">感性</div>
-          <div class="gray-bar"></div>
-          <div class="green-bar-2" style="left: 70%;"></div>
-        </div>
-        <h2>技能</h2>
-        <div class="skill">
-          HTML
-          <div class="gray-bar"></div>
-          <div class="green-bar" style="width: 50%;"></div>
-        </div>
-        <div class="skill">
-          CSS
-          <div class="gray-bar"></div>
-          <div class="green-bar" style="width: 30%;"></div>
+        <div>
+          <h2><i class="fas fa-hammer"></i> 技能</h2>
+          <div class="indicator">
+            <div class="left-text">HTML</div>
+            <div class="gray-bar"></div>
+            <div class="green-bar" style="width: 70%;"></div>
+          </div>
+          <div class="indicator">
+            <div class="left-text">CSS</div>
+            <div class="gray-bar"></div>
+            <div class="green-bar" style="width: 60%;"></div>
+          </div>
+          <div class="indicator">
+            <div class="left-text">JavaScript</div>
+            <div class="gray-bar"></div>
+            <div class="green-bar" style="width: 80%;"></div>
+          </div>
+          <div class="indicator">
+            <div class="left-text">ReactJS</div>
+            <div class="gray-bar"></div>
+            <div class="green-bar" style="width: 90%;"></div>
+          </div>
         </div>
       </div>
     </div>
